@@ -1,4 +1,4 @@
-package com.javaguru.shoppinglist;
+package com.javaguru.shoppinglist.domain;
 
 import java.math.BigDecimal;
 
@@ -86,7 +86,7 @@ public class Product {
     public void setDescription(String description) {
         try {
             if(description.length() < 3 || description.length() > 32) {
-                throw new RuntimeException();
+                    throw new RuntimeException();
             } else {
                 this.description = description;
             }
@@ -98,7 +98,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Product {" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
